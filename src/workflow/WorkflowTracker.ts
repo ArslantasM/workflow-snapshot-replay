@@ -167,14 +167,14 @@ export class WorkflowTracker {
     }
 
     private async saveSession(session: WorkflowSession) {
-        // Workspace içinde SpecFlow klasörü oluştur
+        // Workspace içinde workflow klasörü oluştur
         const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
         if (!workspaceFolder) {
-            console.error('Aktif workspace bulunamadı');
+            console.error('Active workspace not found');
             return;
         }
         
-        const workflowDir = vscode.Uri.joinPath(workspaceFolder.uri, 'SpecFlow', 'workflows');
+        const workflowDir = vscode.Uri.joinPath(workspaceFolder.uri, 'workflow', 'sessions');
         
         try {
             await vscode.workspace.fs.createDirectory(workflowDir);

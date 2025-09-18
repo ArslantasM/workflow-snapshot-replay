@@ -43,7 +43,7 @@ export class WorkflowReplayer {
         const content = fileContent.toString();
         
         // Basit markdown parsing - gerçek implementasyonda daha gelişmiş parsing gerekebilir
-        const sessionIdMatch = content.match(/\*\*Oturum ID:\*\* (.+)/);
+        const sessionIdMatch = content.match(/\*\*Session ID:\*\* (.+)/);
         const workspaceMatch = content.match(/\*\*Workspace:\*\* (.+)/);
         
         if (!sessionIdMatch || !workspaceMatch) {
@@ -60,13 +60,13 @@ export class WorkflowReplayer {
             
             // Açıklamadan event type'ı çıkar
             let eventType: WorkflowEvent['type'] = 'session_started'; // default
-            if (description.includes('Dosya oluşturuldu')) {
+            if (description.includes('File created')) {
                 eventType = 'file_created';
-            } else if (description.includes('Dosya değiştirildi')) {
+            } else if (description.includes('File modified')) {
                 eventType = 'file_modified';
-            } else if (description.includes('Dosya silindi')) {
+            } else if (description.includes('File deleted')) {
                 eventType = 'file_deleted';
-            } else if (description.includes('Editör açıldı')) {
+            } else if (description.includes('Editor opened')) {
                 eventType = 'editor_opened';
             }
 
