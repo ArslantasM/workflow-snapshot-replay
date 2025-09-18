@@ -1247,6 +1247,345 @@ Extension 'ArslantasM.workflow-snapshot-replay' was successfully uninstalled!
 vsce package --allow-star-activation
 ```
 
+```
+Executing prepublish script 'npm run vscode:prepublish'...
+
+> workflow-snapshot-replay@0.1.0 vscode:prepublish
+> npm run compile
+
+
+> workflow-snapshot-replay@0.1.0 compile
+> tsc -p ./
+
+ INFO  Files included in the VSIX:
+workflow-snapshot-replay-0.1.0.vsix
+├─ [Content_Types].xml [0.48 KB]
+├─ extension.vsixmanifest [1.49 KB]
+└─ extension/
+   ├─ .cursorindexingignore [0.11 KB]
+   ├─ KURULUM.md [4.84 KB]
+   ├─ LICENSE.txt [11.14 KB]
+   ├─ README_TR.md [10.42 KB]
+   ├─ USER_GUIDE.md [5.09 KB]
+   ├─ [Content_Types].xml [0.48 KB]
+   ├─ icon.png [1.03 MB]
+   ├─ package.json [5.08 KB]
+   ├─ readme.md [11.15 KB]
+   ├─ extension/
+   │  ├─ LICENSE [11.14 KB]
+   │  ├─ README.md [14.65 KB]
+   │  ├─ icon.png [1.03 MB]
+   │  ├─ package.json [5.08 KB]
+   │  ├─ node_modules/ (11 files) [90.58 KB]
+   │  └─ out/ (13 files) [105.1 KB]
+   └─ out/
+      ├─ extension.js [8.37 KB]
+      ├─ ai/ (2 files) [47.9 KB]
+      ├─ providers/ (3 files) [17.66 KB]
+      ├─ test/ (3 files) [5.03 KB]
+      └─ workflow/ (4 files) [26.23 KB]
+
+=> Run vsce ls --tree to see all included files.
+
+ DONE  Packaged: C:\Projects\Workflow Snapshot_Replay\workflow-snapshot-replay-0.1.0.vsix (52 files, 2.17 MB)                                                   
+```
+
+---
+
+Harika! Şimdi güncellenmiş VSIX'i Cursor'a yükleyelim:
+
+---
+
+```bash
+cursor --install-extension "C:\Projects\Workflow Snapshot_Replay\workflow-snapshot-replay-0.1.0.vsix"
+```
+
+```
+Installing extensions...
+Extension 'workflow-snapshot-replay-0.1.0.vsix' was successfully installed.
+```
+
+---
+
+Mükemmel! Şimdi değişiklikleri commit edelim:
+
+---
+
+```bash
+git add .
+```
+
+---
+
+Cancelled
+
+---
+
+_**User (2025-09-18 21:46Z)**_
+
+@work2.png @work1.png @Dashboard.png  resimleri ekledim hangi klasöre taşıyacağım?
+
+---
+
+_**Assistant**_
+
+Mükemmel ekran görüntüleri! Bu resimleri `images/screenshots/` klasörüne taşıyalım:
+
+---
+
+```bash
+move work1.png images\screenshots\dashboard-demo.png
+```
+
+---
+
+Cancelled
+
+---
+
+_**User (2025-09-18 21:46Z)**_
+
+birde workflow ai asistant penceresinde ai model olarak local model  enable automatic analysis olarak seçili gelsin.
+
+---
+
+_**Assistant**_
+
+Harika! AI Assistant penceresinde varsayılan olarak "local model" ve "enable automatic analysis" seçili gelsin. Bu ayarları düzenleyelim:
+
+---
+
+<details>
+                <summary>Searched codebase "Where is the AI Assistant webview panel created and configured? What are the default settings?" • **2** results</summary>
+            
+| File | Lines |
+|------|-------|
+| `src/ai/AIAssistant.ts` | L3-777 |
+| `src/ai/AIAssistant.ts` | Lundefined-777 |
+
+</details>
+
+---
+
+<details>
+                <summary>Searched codebase "What is the HTML content of the AI Assistant webview? Where are the form controls and default values?" • **2** results</summary>
+            
+| File | Lines |
+|------|-------|
+| `src/ai/AIAssistant.ts` | L3-777 |
+| `src/ai/AIAssistant.ts` | Lundefined-777 |
+
+</details>
+
+---
+
+Şimdi varsayılan ayarları düzenleyelim. HTML'de checkbox ve select elementlerinin varsayılan değerlerini güncelleyelim:
+
+---
+
+<details><summary>Edit file: src/ai/AIAssistant.ts</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 2, lines removed: 2
+
+```diff
+@@ -634,10 +634,10 @@
+              <h2>⚙️ Settings</h2>
+              <label>
+-                 <input type="checkbox" id="autoAnalysis"> Enable automatic analysis
++                 <input type="checkbox" id="autoAnalysis" checked> Enable automatic analysis
+              </label><br><br>
+              <label>
+                  AI Model: 
+                  <select id="aiModel">
+-                     <option value="local">Local Model</option>
++                     <option value="local" selected>Local Model</option>
+                      <option value="custom">Custom API</option>
+                  </select>
+```
+
+</details>
+
+---
+
+Şimdi JavaScript kısmında da bu ayarları başlatma sırasında ayarlayalım:
+
+---
+
+<details><summary>Edit file: src/ai/AIAssistant.ts</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 10, lines removed: undefined
+
+```diff
+@@ -688,4 +688,14 @@
+              contentDiv.innerHTML = message;
+          }
++ 
++         // Sayfa yüklendiğinde varsayılan ayarları uygula
++         document.addEventListener('DOMContentLoaded', function() {
++             const autoAnalysisCheckbox = document.getElementById('autoAnalysis');
++             const aiModelSelect = document.getElementById('aiModel');
++             
++             // Varsayılan değerleri ayarla
++             autoAnalysisCheckbox.checked = true;
++             aiModelSelect.value = 'local';
++         });
+  
+          // AI'dan gelen mesajları dinle
+```
+
+</details>
+
+---
+
+Şimdi extension'ı yeniden compile edelim:
+
+---
+
+Cancelled
+
+---
+
+_**User (2025-09-18 21:46Z)**_
+
+uygulamayı tekrar paketleyelim.
+
+---
+
+_**Assistant**_
+
+Tamam! Güncellenmiş uygulamayı yeniden paketleyelim:
+
+---
+
+```bash
+vsce package --allow-star-activation
+```
+
+```
+Executing prepublish script 'npm run vscode:prepublish'...
+
+> workflow-snapshot-replay@0.1.0 vscode:prepublish
+> npm run compile
+
+
+> workflow-snapshot-replay@0.1.0 compile
+> tsc -p ./
+
+ INFO  Files included in the VSIX:
+workflow-snapshot-replay-0.1.0.vsix
+├─ [Content_Types].xml [0.48 KB]
+├─ extension.vsixmanifest [1.49 KB]
+└─ extension/
+   ├─ .cursorindexingignore [0.11 KB]
+   ├─ Dashboard.png [38.04 KB]
+   ├─ KURULUM.md [4.84 KB]
+   ├─ LICENSE.txt [11.14 KB]
+   ├─ README_TR.md [10.42 KB]
+   ├─ USER_GUIDE.md [5.09 KB]
+   ├─ [Content_Types].xml [0.48 KB]
+   ├─ icon.png [1.03 MB]
+   ├─ package.json [5.08 KB]
+   ├─ readme.md [11.15 KB]
+   ├─ extension/
+   │  ├─ LICENSE [11.14 KB]
+   │  ├─ README.md [14.65 KB]
+   │  ├─ icon.png [1.03 MB]
+   │  ├─ package.json [5.08 KB]
+   │  ├─ node_modules/ (11 files) [90.58 KB]
+   │  └─ out/ (13 files) [105.1 KB]
+   ├─ images/
+   │  └─ screenshots/ (2 files) [452.46 KB]
+   └─ out/
+      ├─ extension.js [8.37 KB]
+      ├─ ai/ (2 files) [48.36 KB]
+      ├─ providers/ (3 files) [17.66 KB]
+      ├─ test/ (3 files) [5.03 KB]
+      └─ workflow/ (4 files) [26.23 KB]
+
+=> Run vsce ls --tree to see all included files.
+
+ DONE  Packaged: C:\Projects\Workflow Snapshot_Replay\workflow-snapshot-replay-0.1.0.vsix (55 files, 2.63 MB)                                                   
+```
+
+---
+
+Mükemmel! Paket başarıyla oluşturuldu. Şimdi Cursor'da mevcut extension'ı kaldırıp yeni versiyonu yükleyelim:
+
+---
+
+```bash
+cursor --uninstall-extension ArslantasM.workflow-snapshot-replay
+```
+
+```
+Uninstalling ArslantasM.workflow-snapshot-replay...
+Extension 'ArslantasM.workflow-snapshot-replay' was successfully uninstalled!
+```
+
+---
+
+```bash
+cursor --install-extension "C:\Projects\Workflow Snapshot_Replay\workflow-snapshot-replay-0.1.0.vsix"
+```
+
+```
+Installing extensions...
+Extension 'workflow-snapshot-replay-0.1.0.vsix' was successfully installed.
+```
+
+---
+
+Harika! 🎉 Extension başarıyla güncellendi. Artık şu özellikler aktif:
+
+## ✅ Yapılan Güncellemeler:
+
+1. **📁 Klasör Yapısı Düzeltildi**: 
+   - `SpecFlow/` → `workflow/` olarak değiştirildi
+   - JSON dosyalar: `workflow/sessions/` klasörüne kaydediliyor
+   - Raporlar: `workflow/reports/` klasörüne kaydediliyor
+
+2. **🌐 Rapor Dili İngilizce**: 
+   - Tüm rapor içeriği İngilizce olarak oluşturuluyor
+   - Tarih formatları en-US olarak ayarlandı
+
+3. **🤖 AI Assistant Varsayılan Ayarları**: 
+   - ✅ "Enable automatic analysis" baştan seçili geliyor
+   - ✅ "Local Model" varsayılan olarak seçili
+
+4. **📸 Ekran Görüntüleri Eklendi**: 
+   - Dashboard ve AI Analysis ekran görüntüleri `images/screenshots/` klasöründe
+
+Şimdi Cursor'ı yeniden başlatıp test edebilirsiniz:
+
+1. **Dashboard Test**: Explorer panelinde "Workflow Snapshot & Replay" bölümünü kontrol edin
+2. **Kayıt Test**: Bir workflow kaydedip `workflow/` klasörüne kaydedildiğini kontrol edin
+3. **Rapor Test**: Rapor oluşturup İngilizce olduğunu kontrol edin
+4. **AI Assistant Test**: AI Assistant'ı açıp varsayılan ayarları kontrol edin
+
+Test sonuçlarınızı paylaşın, gerekirse daha fazla düzeltme yapalım! 🚀
+
+---
+
+_**User (2025-09-18 21:46Z)**_
+
+dosyaları github deposuna atalım
+
+---
+
+_**Assistant**_
+
+Tamam! Tüm güncellemeleri GitHub deposuna gönderelim:
+
+---
+
+
+
 ---
 
 

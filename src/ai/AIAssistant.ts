@@ -633,12 +633,12 @@ export class AIAssistant {
         <div class="section">
             <h2>⚙️ Settings</h2>
             <label>
-                <input type="checkbox" id="autoAnalysis"> Enable automatic analysis
+                <input type="checkbox" id="autoAnalysis" checked> Enable automatic analysis
             </label><br><br>
             <label>
                 AI Model: 
                 <select id="aiModel">
-                    <option value="local">Local Model</option>
+                    <option value="local" selected>Local Model</option>
                     <option value="custom">Custom API</option>
                 </select>
             </label>
@@ -687,6 +687,16 @@ export class AIAssistant {
             resultsDiv.classList.remove('hidden');
             contentDiv.innerHTML = message;
         }
+
+        // Sayfa yüklendiğinde varsayılan ayarları uygula
+        document.addEventListener('DOMContentLoaded', function() {
+            const autoAnalysisCheckbox = document.getElementById('autoAnalysis');
+            const aiModelSelect = document.getElementById('aiModel');
+            
+            // Varsayılan değerleri ayarla
+            autoAnalysisCheckbox.checked = true;
+            aiModelSelect.value = 'local';
+        });
 
         // AI'dan gelen mesajları dinle
         window.addEventListener('message', event => {
