@@ -19,6 +19,10 @@
   "homepage": "https://github.com/ArslantasM/workflow-snapshot-replay#readme",
   "license": "Apache-2.0",
   "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
   "engines": {
     "vscode": "^1.74.0"
   },
