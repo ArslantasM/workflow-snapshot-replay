@@ -3,7 +3,7 @@
   "displayName": "Workflow Snapshot & Replay",
   "description": "AI-native VS Code extension that automatically captures your development workflow, generates beautiful Markdown documentation, and enables seamless workflow reproduction across different environments",
   "version": "0.1.0",
-  "publisher": "ArslantasM",
+  "publisher": "ArslantasM-tools",
   "author": {
     "name": "Mustafa Barış Arslantaş",
     "email": "arslantas.m@gmail.com",
