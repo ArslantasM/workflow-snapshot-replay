@@ -3,7 +3,7 @@
 <div align="center">
 
 ![Workflow Snapshot Logo](https://img.shields.io/badge/Workflow%20Snapshot-AI%20Native%20Development-blue?style=for-the-badge)
-[![VS Code](https://img.shields.io/badge/VS%20Code-Extension-007ACC?style=for-the-badge&logo=visual-studio-code)](https://marketplace.visualstudio.com/vscode)
+[![VS Code](https://img.shields.io/badge/VS%20Code-Extension-007ACC?style=for-the-badge&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=ArslantasM-tools.workflow-snapshot-replay)
 [![Cursor](https://img.shields.io/badge/Cursor-Compatible-00D4AA?style=for-the-badge)](https://cursor.sh/)
 [![Made in Turkey](https://img.shields.io/badge/Made%20in-Turkey-red?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSIjRTMzMTJEIi8+CjxwYXRoIGQ9Ik0xMC41IDEyTDEzIDEwLjVMMTUuNSAxMkwxMyAxMy41TDEwLjUgMTJaIiBmaWxsPSJ3aGl0ZSIvPgo8Y2lyY2xlIGN4PSIxNi41IiBjeT0iMTIiIHI9IjIiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=)](https://github.com/workflow-tools)
 
@@ -180,6 +180,15 @@ Example AI Analysis:
 ## Quick Start
 
 ### Installation
+
+#### Option 1: VS Code Marketplace (Recommended)
+1. **Open VS Code/Cursor**
+2. **Go to Extensions** (Ctrl+Shift+X)
+3. **Search for**: "Workflow Snapshot & Replay"
+4. **Install** by ArslantasM-tools
+5. **Start Using**: Find "Workflow Snapshot & Replay" in Explorer panel
+
+#### Option 2: Manual Installation
 1. **Download**: Get `workflow-snapshot-replay-0.1.0.vsix` from releases
 2. **Install**: In VS Code/Cursor → Extensions → "Install from VSIX"
 3. **Find Dashboard**: Explorer panel → "Workflow Snapshot & Replay"
