@@ -19,13 +19,13 @@
 *Real-time workflow tracking with Explorer panel integration*
 
 ![Dashboard Screenshot](./images/screenshots/dashboard-demo.png)
-*Coming Soon: Dashboard screenshot will be added*
+*Real-time workflow tracking with Explorer panel integration*
 
 ### AI-Powered Analysis
 *Native AI providing workflow optimization suggestions*
 
 ![AI Analysis](./images/screenshots/ai-analysis-demo.png)
-*Coming Soon: AI analysis screenshot will be added*
+*AI Assistant with local model and automatic analysis enabled by default*
 
 ### Replay Experience
 *Automated workflow reproduction across different environments*

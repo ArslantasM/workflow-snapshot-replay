@@ -1,156 +1,164 @@
 # Changelog
 
-Bu dosya Workflow Snapshot & Replay extension'ının tüm önemli değişikliklerini dokümante eder.
+This document tracks all notable changes to the Workflow Snapshot & Replay extension.
 
 ## [0.1.0] - 2025-09-18
 
-### Yeni Özellikler
+### New Features
 
 #### Explorer Dashboard UI
-- **Yeni Dashboard**: Explorer paneline entegre edilmiş kullanıcı dostu arayüz
-- **Hızlı Eylem Butonları**: Record, Stop, Replay, AI Assistant butonları
-- **Gerçek Zamanlı Durum**: Kayıt durumu ve oturum bilgileri
-- **Son Workflowlar**: Son 3 workflow'a hızlı erişim
-- **Smart Navigation**: Tüm workflow geçmişine kolay erişim
+- **New Dashboard**: User-friendly interface integrated into Explorer panel
+- **Quick Action Buttons**: Record, Stop, Replay, AI Assistant buttons
+- **Real-time Status**: Recording status and session information
+- **Recent Workflows**: Quick access to last 3 workflows
+- **Smart Navigation**: Easy access to complete workflow history
 
 #### Workflow Tracking
-- **Otomatik İzleme**: Dosya değişiklikleri, editör aktiviteleri
-- **Terminal Entegrasyonu**: Terminal açma/kapama olayları
-- **Metin Değişiklikleri**: Detaylı kod değişiklik takibi
-- **Workspace Context**: Proje bilgilerini otomatik kaydetme
-- **Olay Zaman Damgası**: Milisaniye hassasiyetinde zaman kayıtları
+- **Automatic Monitoring**: File changes, editor activities
+- **Terminal Integration**: Terminal open/close events
+- **Text Changes**: Detailed code change tracking
+- **Workspace Context**: Automatic project information saving
+- **Event Timestamps**: Millisecond precision time records
 
-#### Markdown Raporlama
-- **Güzel Formatlanmış Raporlar**: Türkçe Markdown çıktısı
-- **Zaman Çizelgesi**: Kronolojik olay listesi
-- **İstatistik Özeti**: Dosya sayıları, süre, olay sayısı
-- **Yeniden Oynatma Talimatları**: Adım adım rehber
-- **Teknik Detaylar**: VS Code sürümü, extension bilgileri
+#### Markdown Reporting
+- **Beautiful Formatted Reports**: English Markdown output
+- **Timeline View**: Chronological event list
+- **Statistics Summary**: File counts, duration, event count
+- **Replay Instructions**: Step-by-step guide
+- **Technical Details**: VS Code version, extension information
 
-#### Replay Sistemi
-- **Multi-Format Desteği**: JSON ve Markdown dosyalarından replay
-- **Progress Tracking**: Visual ilerleme göstergesi
-- **Dosya İşlemleri**: Oluşturma, düzenleme, silme otomasyonu
-- **Editör Kontrolü**: Otomatik dosya açma
-- **Terminal Komutları**: Komut çalıştırma desteği
-- **Hata Yönetimi**: Graceful error handling
+#### Replay System
+- **Multi-Format Support**: Replay from JSON and Markdown files
+- **Progress Tracking**: Visual progress indicator
+- **File Operations**: Create, edit, delete automation
+- **Editor Control**: Automatic file opening
+- **Terminal Commands**: Command execution support
+- **Error Management**: Graceful error handling
 
 #### AI Assistant
-- **Yerleşik Webview**: Güzel arayüzlü AI paneli
-- **Workflow Analizi**: Verimlilik değerlendirmesi
-- **Optimizasyon Önerileri**: Gereksiz adım tespiti
-- **Geliştirme Tavsiyeleri**: Best practice önerileri
-- **Akıllı Açıklamalar**: Workflow'un ne yaptığını anlama
-- **API Bağımsız**: Yerleşik analiz motoru
+- **Built-in Webview**: Beautiful AI panel interface
+- **Workflow Analysis**: Productivity evaluation
+- **Optimization Suggestions**: Unnecessary step detection
+- **Development Recommendations**: Best practice suggestions
+- **Smart Explanations**: Understanding what workflow accomplished
+- **API Independent**: Built-in analysis engine
 
-#### Kullanıcı Deneyimi
-- **Command Palette**: Tüm komutlara kolay erişim
-- **Keyboard Shortcuts**: Hızlı işlem desteği
-- **Ayar Paneli**: Kişiselleştirilebilir seçenekler
-- **Türkçe Arayüz**: Tam Türkçe dil desteği
-- **Context Menus**: Sağ tık menüleri
-- **Quick Pick**: Hızlı seçim dialoglari
+#### User Experience
+- **Command Palette**: Easy access to all commands
+- **Keyboard Shortcuts**: Fast operation support
+- **Settings Panel**: Customizable options
+- **English Interface**: Full English language support
+- **Context Menus**: Right-click menus
+- **Quick Pick**: Fast selection dialogs
 
-### Teknik İyileştirmeler
+### Technical Improvements
 
-#### Proje Yapısı
-- **Modüler Mimari**: Ayrılmış sorumluluklar
-- **TypeScript**: Tam tip güvenliği
-- **ESLint**: Kod kalitesi standartları
+#### Project Structure
+- **Modular Architecture**: Separated responsibilities
+- **TypeScript**: Full type safety
+- **ESLint**: Code quality standards
 - **Mocha Testing**: Unit test framework
-- **VS Code API**: En son API özellikleri
+- **VS Code API**: Latest API features
 
-#### Geliştirici Deneyimi
-- **Hot Reload**: Watch mode ile hızlı geliştirme
-- **Debug Config**: VS Code debug yapılandırması
-- **Task Runner**: Otomatik build görevleri
-- **Extension Packaging**: VSIX paket oluşturma
-- **Linting Rules**: Tutarlı kod formatı
+#### Developer Experience
+- **Hot Reload**: Fast development with watch mode
+- **Debug Config**: VS Code debug configuration
+- **Task Runner**: Automated build tasks
+- **Extension Packaging**: VSIX package creation
+- **Linting Rules**: Consistent code formatting
 
-#### Dokümantasyon
-- **Detaylı README**: Kurulum ve kullanım kılavuzu
-- **Kullanım Kılavuzu**: Adım adım örnekler
-- **API Dokümantasyonu**: Geliştirici referansı
-- **Changelog**: Sürüm geçmişi takibi
-- **TypeScript Definitions**: Tam tip desteği
+#### Documentation
+- **Detailed README**: Installation and usage guide
+- **User Guide**: Step-by-step examples
+- **API Documentation**: Developer reference
+- **Changelog**: Version history tracking
+- **TypeScript Definitions**: Full type support
 
-### UI/UX Geliştirmeleri
+### UI/UX Improvements
 
-#### Dashboard Tasarımı
-- **Minimalist Arayüz**: Sade ve kullanışlı tasarım
-- **Icon Integration**: VS Code tema uyumlu ikonlar
-- **Smart Grouping**: Mantıklı içerik gruplama
-- **Responsive Layout**: Farklı panel boyutları
-- **Dark/Light Theme**: Otomatik tema uyumu
+#### Dashboard Design
+- **Minimalist Interface**: Clean and functional design
+- **Icon Integration**: VS Code theme compatible icons
+- **Smart Grouping**: Logical content grouping
+- **Responsive Layout**: Different panel sizes
+- **Dark/Light Theme**: Automatic theme adaptation
 
-#### Etkileşim Tasarımı
-- **One-Click Actions**: Tek tıkla işlemler
-- **Visual Feedback**: Durum göstergeleri
-- **Progress Indicators**: İlerleme çubukları
-- **Toast Notifications**: Bilgilendirme mesajları
-- **Contextual Help**: Bağlamsal yardım
+#### Interaction Design
+- **One-Click Actions**: Single click operations
+- **Visual Feedback**: Status indicators
+- **Progress Indicators**: Progress bars
+- **Toast Notifications**: Information messages
+- **Contextual Help**: Context-sensitive help
 
-### Güvenlik ve Stabilite
+### Security and Stability
 
-#### Güvenlik Önlemleri
-- **File System Safety**: Güvenli dosya işlemleri
-- **Input Validation**: Girdi doğrulama
-- **Error Boundaries**: Hata yakalama
-- **Resource Cleanup**: Bellek yönetimi
-- **Permission Handling**: Yetki kontrolü
+#### Security Measures
+- **File System Safety**: Safe file operations
+- **Input Validation**: Input verification
+- **Error Boundaries**: Error catching
+- **Resource Cleanup**: Memory management
+- **Permission Handling**: Access control
 
-#### Performans
-- **Lazy Loading**: İhtiyaç anında yükleme
-- **Event Debouncing**: Olay filtreleme
-- **Memory Management**: Bellek optimizasyonu
-- **Async Operations**: Non-blocking işlemler
-- **Efficient Storage**: Optimized veri saklama
+#### Performance
+- **Lazy Loading**: Load on demand
+- **Event Debouncing**: Event filtering
+- **Memory Management**: Memory optimization
+- **Async Operations**: Non-blocking operations
+- **Efficient Storage**: Optimized data storage
 
-### Desteklenen Formatlar
+### Supported Formats
 
-#### Çıktı Formatları
-- **Markdown (.md)**: Varsayılan format
-- **JSON (.json)**: Programatik erişim
-- **HTML (.html)**: Web görüntüleme (gelecek sürüm)
+#### Output Formats
+- **Markdown (.md)**: Default format
+- **JSON (.json)**: Programmatic access
+- **HTML (.html)**: Web viewing (future version)
 
-#### Replay Formatları
-- **JSON Workflow**: Tam veri desteği
-- **Markdown Report**: Rapor tabanlı replay
-- **Custom Scripts**: Özel replay senaryoları (gelecek)
+#### Replay Formats
+- **JSON Workflow**: Full data support
+- **Markdown Report**: Report-based replay
+- **Custom Scripts**: Custom replay scenarios (future)
 
-### Yerelleştirme
-- **Türkçe UI**: Tam Türkçe arayüz
-- **Tarih Formatları**: Türk tarih formatı
-- **Sayı Formatları**: Yerel sayı gösterimi
-- **Zaman Dilimi**: Otomatik zaman dilimi
+### Localization
+- **English UI**: Full English interface
+- **Date Formats**: US date format
+- **Number Formats**: Local number display
+- **Time Zone**: Automatic time zone
 
-### Gelecek Planları
+### Future Plans
 
-#### v0.2.0 Hedefleri
-- [ ] Git entegrasyonu (commit tracking)
-- [ ] Team collaboration özelliği
-- [ ] Cloud sync desteği
+#### v0.2.0 Goals
+- [ ] Git integration (commit tracking)
+- [ ] Team collaboration feature
+- [ ] Cloud sync support
 - [ ] Plugin system
 - [ ] Advanced AI features
 - [ ] Performance metrics
 
-#### Uzun Vadeli Vizyon
+#### Long-term Vision
 - [ ] Multi-language support
 - [ ] Cross-platform compatibility
 - [ ] Enterprise features
 - [ ] Marketplace publishing
 - [ ] Community contributions
 
-### Bilinen Sorunlar
-- Windows'ta node-pty bağımlılığı kaldırıldı (terminal tracking sınırlı)
-- Büyük dosyalarda replay performansı optimize edilmeli
-- AI analiz sonuçları daha detaylı olabilir
+### Known Issues
+- node-pty dependency removed on Windows (limited terminal tracking)
+- Replay performance should be optimized for large files
+- AI analysis results could be more detailed
 
-### Teşekkürler
-- VS Code team'ine API desteği için
-- TypeScript community'sine
-- Tüm test eden geliştiricilere
+### Bug Fixes
+
+#### v0.1.0 Hotfixes
+- **Fixed folder structure**: Changed from 'SpecFlow' to 'workflow' directory
+- **Fixed report language**: Reports now generated in English instead of Turkish
+- **Fixed AI Assistant defaults**: Local model and auto-analysis now enabled by default
+- **Added screenshots**: Dashboard and AI analysis screenshots included
+
+### Acknowledgments
+- VS Code team for API support
+- TypeScript community
+- All developers who tested the extension
 
 ---
 
-**Not**: Bu changelog [Keep a Changelog](https://keepachangelog.com/) formatını takip eder.
+**Note**: This changelog follows the [Keep a Changelog](https://keepachangelog.com/) format.
