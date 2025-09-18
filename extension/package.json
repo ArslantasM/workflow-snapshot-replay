@@ -1,0 +1,182 @@
+{
+  "name": "workflow-snapshot-replay",
+  "displayName": "Workflow Snapshot & Replay",
+  "description": "AI-native VS Code extension that automatically captures your development workflow, generates beautiful Markdown documentation, and enables seamless workflow reproduction across different environments",
+  "version": "0.1.0",
+  "publisher": "ArslantasM",
+  "author": {
+    "name": "Mustafa Barış Arslantaş",
+    "email": "contact@arslantas.dev",
+    "url": "https://github.com/ArslantasM"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArslantasM/workflow-snapshot-replay.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ArslantasM/workflow-snapshot-replay/issues"
+  },
+  "homepage": "https://github.com/ArslantasM/workflow-snapshot-replay#readme",
+  "license": "Apache-2.0",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other",
+    "Debuggers",
+    "Education"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "workflowSnapshot.startRecording",
+        "title": "Start Recording",
+        "category": "Workflow Snapshot"
+      },
+      {
+        "command": "workflowSnapshot.stopRecording",
+        "title": "Stop Recording",
+        "category": "Workflow Snapshot"
+      },
+      {
+        "command": "workflowSnapshot.generateReport",
+        "title": "Generate Report",
+        "category": "Workflow Snapshot"
+      },
+      {
+        "command": "workflowSnapshot.replayWorkflow",
+        "title": "Replay Workflow",
+        "category": "Workflow Snapshot"
+      },
+      {
+        "command": "workflowSnapshot.openAIAssistant",
+        "title": "Open AI Assistant",
+        "category": "Workflow Snapshot"
+      },
+      {
+        "command": "workflowSnapshot.generateReportFromFile",
+        "title": "Generate Report from File",
+        "category": "Workflow Snapshot"
+      },
+      {
+        "command": "workflowSnapshot.deleteWorkflow",
+        "title": "Delete Workflow",
+        "category": "Workflow Snapshot"
+      },
+      {
+        "command": "workflowSnapshot.showWorkflowDetails",
+        "title": "Show Workflow Details",
+        "category": "Workflow Snapshot"
+      },
+      {
+        "command": "workflowSnapshot.showAllWorkflows",
+        "title": "Show All Workflows",
+        "category": "Workflow Snapshot"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "workflowSnapshot.startRecording"
+        },
+        {
+          "command": "workflowSnapshot.stopRecording"
+        },
+        {
+          "command": "workflowSnapshot.generateReport"
+        },
+        {
+          "command": "workflowSnapshot.replayWorkflow"
+        },
+        {
+          "command": "workflowSnapshot.openAIAssistant"
+        },
+        {
+          "command": "workflowSnapshot.generateReportFromFile"
+        },
+        {
+          "command": "workflowSnapshot.deleteWorkflow"
+        },
+        {
+          "command": "workflowSnapshot.showWorkflowDetails"
+        },
+        {
+          "command": "workflowSnapshot.showAllWorkflows"
+        }
+      ]
+    },
+    "views": {
+      "explorer": [
+        {
+          "id": "workflowDashboard",
+          "name": "Workflow Snapshot & Replay",
+          "when": "true",
+          "icon": "$(record)",
+          "contextualTitle": "Workflow Snapshot & Replay"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Workflow Snapshot",
+      "properties": {
+        "workflowSnapshot.autoSave": {
+          "type": "boolean",
+          "default": true,
+          "description": "Workflow'ları otomatik olarak kaydet"
+        },
+        "workflowSnapshot.outputFormat": {
+          "type": "string",
+          "enum": [
+            "markdown",
+            "json",
+            "html"
+          ],
+          "default": "markdown",
+          "description": "Çıktı formatı"
+        },
+        "workflowSnapshot.aiProvider": {
+          "type": "string",
+          "enum": [
+            "local",
+            "custom"
+          ],
+          "default": "local",
+          "description": "AI sağlayıcı türü"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package",
+    "deploy": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.74.0",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "@vscode/test-electron": "^2.2.0",
+    "eslint": "^8.28.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.1.0",
+    "typescript": "^4.9.4",
+    "vsce": "2.10.0"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.3"
+  }
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Language="en-US" Id="workflow-snapshot-replay" Version="0.1.0" Publisher="ArslantasM"/>
+    <DisplayName>Workflow Snapshot &amp; Replay</DisplayName>
+    <Description xml:space="preserve">Geliştiricinin çalışma oturumunu kaydeder, dokümante eder ve yeniden oynatılabilir hale getirir</Description>
+    <Tags>workflow,documentation,replay,ai,productivity,turkish</Tags>
+    <Categories>Other,Debuggers,Education</Categories>
+    <GalleryFlags>Preview</GalleryFlags>
+    <License>LICENSE</License>
+    <Icon>icon.png</Icon>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Code" Version="[1.74.0,)"/>
+  </Installation>
+  <Dependencies/>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="extension/package.json" Addressable="true"/>
+    <Asset Type="Microsoft.VisualStudio.Services.Content.Details" Path="extension/README.md" Addressable="true"/>
+    <Asset Type="Microsoft.VisualStudio.Services.Content.License" Path="extension/LICENSE" Addressable="true"/>
+    <Asset Type="Microsoft.VisualStudio.Services.Icons.Default" Path="extension/icon.png" Addressable="true"/>
+  </Assets>
+</PackageManifest>

@@ -1,0 +1,694 @@
+{
+  "id": "workflow_1758203370782_jbf5f4085",
+  "startTime": 1758203370782,
+  "endTime": 1758203770193,
+  "events": [
+    {
+      "type": "session_started",
+      "timestamp": 1758203370782,
+      "data": {
+        "workspace": "c:\\Projects\\Workflow Snapshot_Replay\\test-workflow"
+      }
+    },
+    {
+      "type": "editor_opened",
+      "timestamp": 1758203375089,
+      "data": {
+        "path": "c:\\Projects\\Workflow Snapshot_Replay\\test-workflow\\test.js",
+        "relativePath": "test.js",
+        "language": "javascript"
+      }
+    },
+    {
+      "type": "file_modified",
+      "timestamp": 1758203387232,
+      "data": {
+        "path": "c:\\Projects\\Workflow Snapshot_Replay\\test-workflow\\.specstory\\history\\2025-09-18_09-38Z-test-başlatma-süreci.md",
+        "relativePath": ".specstory/history/2025-09-18_09-38Z-test-başlatma-süreci.md"
+      }
+    },
+    {
+      "type": "terminal_opened",
+      "timestamp": 1758203388074,
+      "data": {
+        "name": ""
+      }
+    },
+    {
+      "type": "editor_opened",
+      "timestamp": 1758203431785,
+      "data": {
+        "path": "c:\\Projects\\Workflow Snapshot_Replay\\test-workflow\\SpecFlow\\reports\\workflow_report_workflow_1758203370782_jbf5f4085.md",
+        "relativePath": "SpecFlow/reports/workflow_report_workflow_1758203370782_jbf5f4085.md",
+        "language": "markdown"
+      }
+    },
+    {
+      "type": "file_created",
+      "timestamp": 1758203431836,
+      "data": {
+        "path": "c:\\Projects\\Workflow Snapshot_Replay\\test-workflow\\SpecFlow",
+        "relativePath": "SpecFlow"
+      }
+    },
+    {
+      "type": "file_created",
+      "timestamp": 1758203431836,
+      "data": {
+        "path": "c:\\Projects\\Workflow Snapshot_Replay\\test-workflow\\SpecFlow\\reports",
+        "relativePath": "SpecFlow/reports"
+      }
+    },
+    {
+      "type": "file_created",
+      "timestamp": 1758203431836,
+      "data": {
+        "path": "c:\\Projects\\Workflow Snapshot_Replay\\test-workflow\\SpecFlow\\reports\\workflow_report_workflow_1758203370782_jbf5f4085.md",
+        "relativePath": "SpecFlow/reports/workflow_report_workflow_1758203370782_jbf5f4085.md"
+      }
+    },
+    {
+      "type": "file_modified",
+      "timestamp": 1758203569144,
+      "data": {
+        "path": "c:\\Projects\\Workflow Snapshot_Replay\\test-workflow\\.specstory\\history\\2025-09-18_09-38Z-test-başlatma-süreci.md",
+        "relativePath": ".specstory/history/2025-09-18_09-38Z-test-başlatma-süreci.md"
+      }
+    },
+    {
+      "type": "file_modified",
+      "timestamp": 1758203569227,
+      "data": {
+        "path": "c:\\Projects\\Workflow Snapshot_Replay\\test-workflow\\.specstory\\history\\2025-09-18_09-38Z-test-başlatma-süreci.md",
+        "relativePath": ".specstory/history/2025-09-18_09-38Z-test-başlatma-süreci.md"
+      }
+    },
+    {
+      "type": "file_created",
+      "timestamp": 1758203586978,
+      "data": {
+        "path": "c:\\Projects\\Workflow Snapshot_Replay\\test-workflow\\test2.js",
+        "relativePath": "test2.js"
+      }
+    },
+    {
+      "type": "text_changed",
+      "timestamp": 1758203586994,
+      "data": {
+        "path": "c:\\Projects\\Workflow Snapshot_Replay\\test-workflow\\test2.js",
+        "relativePath": "test2.js",
+        "changes": [
+          {
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 0
+              },
+              "end": {
+                "line": 0,
+                "character": 0
+              }
+            },
+            "text": "// Gelişmiş Test Dosyası - Karmaşık JavaScript Süreçlerini Test Etmek İçin\r\nconsole.log(\"🚀 Gelişmiş Test Başlatılıyor...\");\r\n\r\n// 1. Sınıf Tanımlaması ve Kalıtım\r\nclass BaseProcessor {\r\n    constructor(name) {\r\n        this.name = name;\r\n        this.startTime = Date.now();\r\n        console.log(`📦 ${this.name} işlemcisi oluşturuldu`);\r\n    }\r\n\r\n    async process(data) {\r\n        console.log(`⚙️ ${this.name} işlem başlatıldı...`);\r\n        await this.delay(Math.random() * 1000 + 500);\r\n        return `${this.name} tarafından işlendi: ${data}`;\r\n    }\r\n\r\n    delay(ms) {\r\n        return new Promise(resolve => setTimeout(resolve, ms));\r\n    }\r\n\r\n    getExecutionTime() {\r\n        return Date.now() - this.startTime;\r\n    }\r\n}\r\n\r\nclass AdvancedProcessor extends BaseProcessor {\r\n    constructor(name, complexity = 1) {\r\n        super(name);\r\n        this.complexity = complexity;\r\n        this.processedCount = 0;\r\n    }\r\n\r\n    async process(data) {\r\n        console.log(`🔥 Gelişmiş işlem başlatıldı (Karmaşıklık: ${this.complexity})`);\r\n        \r\n        // Karmaşık hesaplama simülasyonu\r\n        for (let i = 0; i < this.complexity * 1000; i++) {\r\n            Math.sqrt(Math.random() * 1000);\r\n        }\r\n\r\n        const result = await super.process(data);\r\n        this.processedCount++;\r\n        \r\n        console.log(`✅ İşlem tamamlandı. Toplam işlenen: ${this.processedCount}`);\r\n        return `[ADVANCED] ${result}`;\r\n    }\r\n\r\n    async batchProcess(dataArray) {\r\n        console.log(`📊 Toplu işlem başlatıldı: ${dataArray.length} öğe`);\r\n        const results = [];\r\n        \r\n        for (const data of dataArray) {\r\n            try {\r\n                const result = await this.process(data);\r\n                results.push({ success: true, data: result });\r\n            } catch (error) {\r\n                results.push({ success: false, error: error.message });\r\n                console.error(`❌ İşlem hatası: ${error.message}`);\r\n            }\r\n        }\r\n        \r\n        return results;\r\n    }\r\n}\r\n\r\n// 2. Promise Chain ve Async/Await Karışımı\r\nasync function complexAsyncOperation() {\r\n    console.log(\"🔄 Karmaşık async işlem başlatıldı...\");\r\n    \r\n    const operations = [\r\n        () => fetchData(\"kullanici-verileri\"),\r\n        () => processUserData(),\r\n        () => validateResults(),\r\n        () => saveToDatabase()\r\n    ];\r\n\r\n    let result = null;\r\n    for (const operation of operations) {\r\n        try {\r\n            result = await operation();\r\n            console.log(`✓ İşlem tamamlandı: ${operation.name}`);\r\n        } catch (error) {\r\n            console.error(`❌ İşlem hatası: ${error.message}`);\r\n            throw error;\r\n        }\r\n    }\r\n    \r\n    return result;\r\n}\r\n\r\n// 3. Simüle edilmiş API çağrıları\r\nasync function fetchData(endpoint) {\r\n    console.log(`🌐 API çağrısı yapılıyor: ${endpoint}`);\r\n    await new Promise(resolve => setTimeout(resolve, Math.random() * 800 + 200));\r\n    \r\n    if (Math.random() < 0.1) {\r\n        throw new Error(`API hatası: ${endpoint} erişilemez`);\r\n    }\r\n    \r\n    return {\r\n        endpoint,\r\n        data: `${endpoint} verisi`,\r\n        timestamp: new Date().toISOString(),\r\n        requestId: Math.random().toString(36).substring(7)\r\n    };\r\n}\r\n\r\nasync function processUserData() {\r\n    console.log(\"👤 Kullanıcı verileri işleniyor...\");\r\n    await new Promise(resolve => setTimeout(resolve, 300));\r\n    return { processed: true, users: Math.floor(Math.random() * 100) };\r\n}\r\n\r\nasync function validateResults() {\r\n    console.log(\"🔍 Sonuçlar doğrulanıyor...\");\r\n    await new Promise(resolve => setTimeout(resolve, 200));\r\n    \r\n    if (Math.random() < 0.05) {\r\n        throw new Error(\"Doğrulama hatası: Geçersiz veri formatı\");\r\n    }\r\n    \r\n    return { valid: true, score: Math.random() * 100 };\r\n}\r\n\r\nasync function saveToDatabase() {\r\n    console.log(\"💾 Veritabanına kaydediliyor...\");\r\n    await new Promise(resolve => setTimeout(resolve, 400));\r\n    return { saved: true, recordId: Date.now() };\r\n}\r\n\r\n// 4. Event Emitter Simülasyonu\r\nclass EventProcessor {\r\n    constructor() {\r\n        this.listeners = {};\r\n        this.eventCount = 0;\r\n    }\r\n\r\n    on(event, callback) {\r\n        if (!this.listeners[event]) {\r\n            this.listeners[event] = [];\r\n        }\r\n        this.listeners[event].push(callback);\r\n    }\r\n\r\n    emit(event, data) {\r\n        console.log(`📡 Event yayınlandı: ${event}`);\r\n        this.eventCount++;\r\n        \r\n        if (this.listeners[event]) {\r\n            this.listeners[event].forEach(callback => {\r\n                try {\r\n                    callback(data);\r\n                } catch (error) {\r\n                    console.error(`Event handler hatası: ${error.message}`);\r\n                }\r\n            });\r\n        }\r\n    }\r\n\r\n    getEventCount() {\r\n        return this.eventCount;\r\n    }\r\n}\r\n\r\n// 5. Ana Test Fonksiyonu\r\nasync function runAdvancedTests() {\r\n    console.log(\"\\n\" + \"=\".repeat(50));\r\n    console.log(\"🧪 GELİŞMİŞ TEST SÜİTİ BAŞLATIILIYOR\");\r\n    console.log(\"=\".repeat(50));\r\n\r\n    try {\r\n        // Test 1: Sınıf ve Kalıtım Testi\r\n        console.log(\"\\n📋 Test 1: Sınıf İşlemleri\");\r\n        const processor = new AdvancedProcessor(\"TestProcessor\", 3);\r\n        const singleResult = await processor.process(\"test-verisi-1\");\r\n        console.log(`Sonuç: ${singleResult}`);\r\n\r\n        // Test 2: Toplu İşlem Testi\r\n        console.log(\"\\n📋 Test 2: Toplu İşlemler\");\r\n        const testData = [\"veri-1\", \"veri-2\", \"veri-3\", \"veri-4\", \"veri-5\"];\r\n        const batchResults = await processor.batchProcess(testData);\r\n        console.log(`Toplu işlem tamamlandı: ${batchResults.length} sonuç`);\r\n\r\n        // Test 3: Karmaşık Async İşlemler\r\n        console.log(\"\\n📋 Test 3: Karmaşık Async İşlemler\");\r\n        const complexResult = await complexAsyncOperation();\r\n        console.log(`Karmaşık işlem sonucu:`, complexResult);\r\n\r\n        // Test 4: Event System Testi\r\n        console.log(\"\\n📋 Test 4: Event Sistemi\");\r\n        const eventProcessor = new EventProcessor();\r\n        \r\n        eventProcessor.on('test-event', (data) => {\r\n            console.log(`🎯 Event alındı: ${JSON.stringify(data)}`);\r\n        });\r\n        \r\n        eventProcessor.on('error-event', (error) => {\r\n            console.log(`⚠️ Hata eventi: ${error}`);\r\n        });\r\n\r\n        // Event'leri tetikle\r\n        for (let i = 0; i < 5; i++) {\r\n            eventProcessor.emit('test-event', { \r\n                id: i, \r\n                message: `Test mesajı ${i + 1}`,\r\n                timestamp: Date.now()\r\n            });\r\n            await new Promise(resolve => setTimeout(resolve, 100));\r\n        }\r\n\r\n        // Test 5: Paralel İşlemler\r\n        console.log(\"\\n📋 Test 5: Paralel İşlemler\");\r\n        const parallelTasks = [\r\n            fetchData(\"endpoint-1\"),\r\n            fetchData(\"endpoint-2\"),\r\n            fetchData(\"endpoint-3\")\r\n        ];\r\n\r\n        const parallelResults = await Promise.allSettled(parallelTasks);\r\n        console.log(`Paralel işlemler tamamlandı: ${parallelResults.length} sonuç`);\r\n\r\n        // Özet\r\n        console.log(\"\\n\" + \"=\".repeat(50));\r\n        console.log(\"📊 TEST SONUÇLARI\");\r\n        console.log(\"=\".repeat(50));\r\n        console.log(`✅ İşlem süresi: ${processor.getExecutionTime()}ms`);\r\n        console.log(`✅ İşlenen veri sayısı: ${processor.processedCount}`);\r\n        console.log(`✅ Event sayısı: ${eventProcessor.getEventCount()}`);\r\n        console.log(`✅ Paralel görev sayısı: ${parallelResults.length}`);\r\n        console.log(\"🎉 Tüm testler başarıyla tamamlandı!\");\r\n\r\n    } catch (error) {\r\n        console.error(\"❌ Test hatası:\", error.message);\r\n        console.error(\"Stack trace:\", error.stack);\r\n    }\r\n}\r\n\r\n// 6. Error Handling ve Cleanup\r\nprocess.on('uncaughtException', (error) => {\r\n    console.error('🚨 Yakalanmamış hata:', error.message);\r\n    process.exit(1);\r\n});\r\n\r\nprocess.on('unhandledRejection', (reason, promise) => {\r\n    console.error('🚨 İşlenmemiş Promise reddi:', reason);\r\n});\r\n\r\n// Ana fonksiyonu çalıştır\r\nif (require.main === module) {\r\n    runAdvancedTests()\r\n        .then(() => {\r\n            console.log(\"\\n🏁 Test suite tamamlandı!\");\r\n            process.exit(0);\r\n        })\r\n        .catch((error) => {\r\n            console.error(\"💥 Fatal hata:\", error);\r\n            process.exit(1);\r\n        });\r\n}\r\n\r\nmodule.exports = {\r\n    BaseProcessor,\r\n    AdvancedProcessor,\r\n    EventProcessor,\r\n    runAdvancedTests,\r\n    fetchData,\r\n    complexAsyncOperation\r\n};\r\n\r\n",
+            "rangeLength": 0
+          }
+        ]
+      }
+    },
+    {
+      "type": "text_changed",
+      "timestamp": 1758203586996,
+      "data": {
+        "path": "c:\\Projects\\Workflow Snapshot_Replay\\test-workflow\\test2.js",
+        "relativePath": "test2.js",
+        "changes": []
+      }
+    },
+    {
+      "type": "text_changed",
+      "timestamp": 1758203586999,
+      "data": {
+        "path": "c:\\Projects\\Workflow Snapshot_Replay\\test-workflow\\test2.js",
+        "relativePath": "test2.js",
+        "changes": [
+          {
+            "range": {
+              "start": {
+                "line": 269,
+                "character": 0
+              },
+              "end": {
+                "line": 270,
+                "character": 0
+              }
+            },
+            "text": "",
+            "rangeLength": 2
+          }
+        ]
+      }
+    },
+    {
+      "type": "text_changed",
+      "timestamp": 1758203587037,
+      "data": {
+        "path": "c:\\Projects\\Workflow Snapshot_Replay\\test-workflow\\test2.js",
+        "relativePath": "test2.js",
+        "changes": []
+      }
+    },
+    {
+      "type": "text_changed",
+      "timestamp": 1758203587039,
+      "data": {
+        "path": "c:\\Projects\\Workflow Snapshot_Replay\\test-workflow\\test2.js",
+        "relativePath": "test2.js",
+        "changes": []
+      }
+    },
+    {
+      "type": "file_modified",
+      "timestamp": 1758203587154,
+      "data": {
+        "path": "c:\\Projects\\Workflow Snapshot_Replay\\test-workflow\\test2.js",
+        "relativePath": "test2.js"
+      }
+    },
+    {
+      "type": "editor_opened",
+      "timestamp": 1758203608232,
+      "data": {
+        "path": "c:\\Projects\\Workflow Snapshot_Replay\\test-workflow\\SpecFlow\\reports\\workflow_report_workflow_1758203370782_jbf5f4085.md",
+        "relativePath": "SpecFlow/reports/workflow_report_workflow_1758203370782_jbf5f4085.md",
+        "language": "markdown"
+      }
+    },
+    {
+      "type": "file_modified",
+      "timestamp": 1758203608309,
+      "data": {
+        "path": "c:\\Projects\\Workflow Snapshot_Replay\\test-workflow\\SpecFlow\\reports\\workflow_report_workflow_1758203370782_jbf5f4085.md",
+        "relativePath": "SpecFlow/reports/workflow_report_workflow_1758203370782_jbf5f4085.md"
+      }
+    },
+    {
+      "type": "text_changed",
+      "timestamp": 1758203608422,
+      "data": {
+        "path": "c:\\Projects\\Workflow Snapshot_Replay\\test-workflow\\SpecFlow\\reports\\workflow_report_workflow_1758203370782_jbf5f4085.md",
+        "relativePath": "SpecFlow/reports/workflow_report_workflow_1758203370782_jbf5f4085.md",
+        "changes": [
+          {
+            "range": {
+              "start": {
+                "line": 6,
+                "character": 0
+              },
+              "end": {
+                "line": 66,
+                "character": 0
+              }
+            },
+            "text": "- **Bitiş:** 18.09.2025 16:53:28\n- **Süre:** 4 dakika\n- **Workspace:** c:\\Projects\\Workflow Snapshot_Replay\\test-workflow\n\n## 📈 Özet İstatistikler\n\n- **Toplam Olay:** 17\n- **Değiştirilen Dosya:** 5\n- **Çalıştırılan Komut:** 0\n\n## 🕒 Zaman Çizelgesi\n\n### 1. 16:49:35 - Editör açıldı: test.js\n\n```json\n{\n  \"path\": \"c:\\\\Projects\\\\Workflow Snapshot_Replay\\\\test-workflow\\\\test.js\",\n  \"relativePath\": \"test.js\",\n  \"language\": \"javascript\"\n}\n```\n\n\n### 2. 16:49:47 - Dosya değiştirildi: .specstory/history/2025-09-18_09-38Z-test-başlatma-süreci.md\n\n```json\n{\n  \"path\": \"c:\\\\Projects\\\\Workflow Snapshot_Replay\\\\test-workflow\\\\.specstory\\\\history\\\\2025-09-18_09-38Z-test-başlatma-süreci.md\",\n  \"relativePath\": \".specstory/history/2025-09-18_09-38Z-test-başlatma-süreci.md\"\n}\n```\n\n\n### 3. 16:49:48 - Terminal açıldı: \n\n```json\n{\n  \"name\": \"\"\n}\n```\n\n\n### 4. 16:50:31 - Editör açıldı: SpecFlow/reports/workflow_report_workflow_1758203370782_jbf5f4085.md\n\n```json\n{\n  \"path\": \"c:\\\\Projects\\\\Workflow Snapshot_Replay\\\\test-workflow\\\\SpecFlow\\\\reports\\\\workflow_report_workflow_1758203370782_jbf5f4085.md\",\n  \"relativePath\": \"SpecFlow/reports/workflow_report_workflow_1758203370782_jbf5f4085.md\",\n  \"language\": \"markdown\"\n}\n```\n\n\n### 5. 16:50:31 - Dosya oluşturuldu: SpecFlow\n\n```json\n{\n  \"path\": \"c:\\\\Projects\\\\Workflow Snapshot_Replay\\\\test-workflow\\\\SpecFlow\",\n  \"relativePath\": \"SpecFlow\"\n}\n```\n\n\n### 6. 16:50:31 - Dosya oluşturuldu: SpecFlow/reports\n\n```json\n{\n  \"path\": \"c:\\\\Projects\\\\Workflow Snapshot_Replay\\\\test-workflow\\\\SpecFlow\\\\reports\",\n  \"relativePath\": \"SpecFlow/reports\"\n}\n```\n\n\n### 7. 16:50:31 - Dosya oluşturuldu: SpecFlow/reports/workflow_report_workflow_1758203370782_jbf5f4085.md\n\n```json\n{\n  \"path\": \"c:\\\\Projects\\\\Workflow Snapshot_Replay\\\\test-workflow\\\\SpecFlow\\\\reports\\\\workflow_report_workflow_1758203370782_jbf5f4085.md\",\n  \"relativePath\": \"SpecFlow/reports/workflow_report_workflow_1758203370782_jbf5f4085.md\"\n}\n```\n\n\n### 8. 16:52:49 - Dosya değiştirildi: .specstory/history/2025-09-18_09-38Z-test-başlatma-süreci.md\n\n```json\n{\n  \"path\": \"c:\\\\Projects\\\\Workflow Snapshot_Replay\\\\test-workflow\\\\.specstory\\\\history\\\\2025-09-18_09-38Z-test-başlatma-süreci.md\",\n  \"relativePath\": \".specstory/history/2025-09-18_09-38Z-test-başlatma-süreci.md\"\n}\n```\n\n\n### 9. 16:52:49 - Dosya değiştirildi: .specstory/history/2025-09-18_09-38Z-test-başlatma-süreci.md\n\n```json\n{\n  \"path\": \"c:\\\\Projects\\\\Workflow Snapshot_Replay\\\\test-workflow\\\\.specstory\\\\history\\\\2025-09-18_09-38Z-test-başlatma-süreci.md\",\n  \"relativePath\": \".specstory/history/2025-09-18_09-38Z-test-başlatma-süreci.md\"\n}\n```\n\n\n### 10. 16:53:06 - Dosya oluşturuldu: test2.js\n\n```json\n{\n  \"path\": \"c:\\\\Projects\\\\Workflow Snapshot_Replay\\\\test-workflow\\\\test2.js\",\n  \"relativePath\": \"test2.js\"\n}\n```\n\n\n### 11. 16:53:06 - Metin değişikliği: test2.js\n\n```json\n{\n  \"path\": \"test2.js\",\n  \"changesCount\": 1\n}\n```\n\n\n### 12. 16:53:06 - Metin değişikliği: test2.js\n\n```json\n{\n  \"path\": \"test2.js\",\n  \"changesCount\": 0\n}\n```\n\n\n### 13. 16:53:06 - Metin değişikliği: test2.js\n\n```json\n{\n  \"path\": \"test2.js\",\n  \"changesCount\": 1\n}\n```\n\n\n### 14. 16:53:07 - Metin değişikliği: test2.js\n\n```json\n{\n  \"path\": \"test2.js\",\n  \"changesCount\": 0\n}\n```\n\n\n### 15. 16:53:07 - Metin değişikliği: test2.js\n\n```json\n{\n  \"path\": \"test2.js\",\n  \"changesCount\": 0\n}\n```\n\n\n### 16. 16:53:07 - Dosya değiştirildi: test2.js\n\n```json\n{\n  \"path\": \"c:\\\\Projects\\\\Workflow Snapshot_Replay\\\\test-workflow\\\\test2.js\",\n  \"relativePath\": \"test2.js\"\n}\n```\n\n\n\n## 🔧 Teknik Detaylar\n\n- **VS Code Sürümü:** 1.99.3\n- **Aktif Extension Sayısı:** 110\n\n## 🎯 Yeniden Oynatma Talimatları\n\nBu workflow'u yeniden oynatmak için aşağıdaki adımları izleyebilirsiniz:\n\n1. Aynı workspace'i açın: `c:\\Projects\\Workflow Snapshot_Replay\\test-workflow`\n2. Extension'ın \"Workflow'u Yeniden Oynat\" komutunu kullanın\n3. Bu rapor dosyasını seçin\n\n---\n\n*Bu rapor Workflow Snapshot & Replay extension'ı tarafından otomatik olarak oluşturulmuştur.*\n*Oluşturulma Tarihi: 18.09.2025 16:53:28*\n",
+            "rangeLength": 1347
+          }
+        ]
+      }
+    },
+    {
+      "type": "file_modified",
+      "timestamp": 1758203632263,
+      "data": {
+        "path": "c:\\Projects\\Workflow Snapshot_Replay\\test-workflow\\.specstory\\.what-is-this.md",
+        "relativePath": ".specstory/.what-is-this.md"
+      }
+    },
+    {
+      "type": "file_modified",
+      "timestamp": 1758203633142,
+      "data": {
+        "path": "c:\\Projects\\Workflow Snapshot_Replay\\test-workflow\\.specstory\\history\\2025-09-18_09-38Z-test-başlatma-süreci.md",
+        "relativePath": ".specstory/history/2025-09-18_09-38Z-test-başlatma-süreci.md"
+      }
+    },
+    {
+      "type": "file_modified",
+      "timestamp": 1758203711504,
+      "data": {
+        "path": "c:\\Projects\\Workflow Snapshot_Replay\\test-workflow\\.specstory\\.what-is-this.md",
+        "relativePath": ".specstory/.what-is-this.md"
+      }
+    },
+    {
+      "type": "session_ended",
+      "timestamp": 1758203770193,
+      "data": {}
+    }
+  ],
+  "workspace": "c:\\Projects\\Workflow Snapshot_Replay\\test-workflow",
+  "metadata": {
+    "vscodeVersion": "1.99.3",
+    "extensions": [
+      {
+        "id": "vscode.bat",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.clojure",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.coffeescript",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.configuration-editing",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.cpp",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.csharp",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.css",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.css-language-features",
+        "version": "1.0.0"
+      },
+      {
+        "id": "anysphere.cursor-always-local",
+        "version": "0.0.1"
+      },
+      {
+        "id": "anysphere.cursor-deeplink",
+        "version": "0.0.1"
+      },
+      {
+        "id": "anysphere.cursor-file-service",
+        "version": "1.0.0"
+      },
+      {
+        "id": "anysphere.cursor-retrieval",
+        "version": "0.0.1"
+      },
+      {
+        "id": "anysphere.cursor-shadow-workspace",
+        "version": "1.0.0"
+      },
+      {
+        "id": "anysphere.cursor-tokenize",
+        "version": "0.0.1"
+      },
+      {
+        "id": "vscode.dart",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.debug-auto-launch",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.debug-server-ready",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.diff",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.docker",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.emmet",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.extension-editing",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.fsharp",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.git",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.git-base",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.github",
+        "version": "0.0.1"
+      },
+      {
+        "id": "vscode.github-authentication",
+        "version": "0.0.2"
+      },
+      {
+        "id": "vscode.go",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.groovy",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.grunt",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.gulp",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.handlebars",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.hlsl",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.html",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.html-language-features",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.ini",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.ipynb",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.jake",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.java",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.javascript",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.json",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.json-language-features",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.julia",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.latex",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.less",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.log",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.lua",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.make",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.markdown",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.markdown-language-features",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.markdown-math",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.media-preview",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.merge-conflict",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.microsoft-authentication",
+        "version": "0.0.1"
+      },
+      {
+        "id": "ms-vscode.js-debug",
+        "version": "1.93.0"
+      },
+      {
+        "id": "ms-vscode.js-debug-companion",
+        "version": "1.1.3"
+      },
+      {
+        "id": "ms-vscode.vscode-js-profile-table",
+        "version": "1.0.9"
+      },
+      {
+        "id": "vscode.builtin-notebook-renderers",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.npm",
+        "version": "1.0.1"
+      },
+      {
+        "id": "vscode.objective-c",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.ocaml",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.perl",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.php",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.php-language-features",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.powershell",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.pug",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.python",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.r",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.razor",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.references-view",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.restructuredtext",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.ruby",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.rust",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.scss",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.search-result",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.shaderlab",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.shellscript",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.simple-browser",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.sql",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.swift",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.terminal-suggest",
+        "version": "1.0.1"
+      },
+      {
+        "id": "vscode.theme-abyss",
+        "version": "1.0.0"
+      },
+      {
+        "id": "undefined_publisher.cursor-themes",
+        "version": "0.0.2"
+      },
+      {
+        "id": "vscode.theme-defaults",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.theme-kimbie-dark",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.theme-monokai",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.theme-monokai-dimmed",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.theme-quietlight",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.theme-red",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.vscode-theme-seti",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.theme-solarized-dark",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.theme-solarized-light",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.theme-tomorrow-night-blue",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.tunnel-forwarding",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.typescript",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.typescript-language-features",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.vb",
+        "version": "1.0.0"
+      },
+      {
+        "id": "ms-toolsai.jupyter-keymap",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.xml",
+        "version": "1.0.0"
+      },
+      {
+        "id": "vscode.yaml",
+        "version": "1.0.0"
+      },
+      {
+        "id": "anysphere.cursorpyright",
+        "version": "1.0.9"
+      },
+      {
+        "id": "ArslantasM.workflow-snapshot-replay",
+        "version": "0.1.0"
+      },
+      {
+        "id": "ms-azuretools.vscode-docker",
+        "version": "2.0.0"
+      },
+      {
+        "id": "ms-python.debugpy",
+        "version": "2025.10.0"
+      },
+      {
+        "id": "ms-python.python",
+        "version": "2025.6.1"
+      },
+      {
+        "id": "ms-python.vscode-pylance",
+        "version": "2024.8.1"
+      },
+      {
+        "id": "ms-vscode.powershell",
+        "version": "2025.2.0"
+      },
+      {
+        "id": "ms-vscode.remote-explorer",
+        "version": "0.5.0"
+      },
+      {
+        "id": "ms-vscode.remote-server",
+        "version": "1.5.2"
+      },
+      {
+        "id": "specpulse.specpulse",
+        "version": "1.0.0"
+      },
+      {
+        "id": "SpecStory.specstory-vscode",
+        "version": "0.19.2"
+      }
+    ]
+  }
+}
