@@ -15,7 +15,8 @@ Thumbs.db
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-test-workflow/__pycache__/
+test-workflow/
+.specstory/
 *.pyc
 *.pyo
 *.pyd

@@ -1,22 +1,15 @@
-# 🎯 Workflow Snapshot & Replay - Kullanım Kılavuzu
+#  Workflow Snapshot & Replay - Kullanım Kılavuzu
 
-## 🚀 Hızlı Başlangıç
+##  Hızlı Başlangıç
 
-### 1. Extension'ı Yükleme
-```bash
-# Geliştirme modunda
-cd workflow-snapshot-replay
-npm install
-npm run compile
-# VS Code'da F5 tuşuna basın
-```
+### 1. Extension'ı Yükleyin
 
 ### 2. Dashboard'u Bulma
 - VS Code/Cursor'da sol kenar çubuğundaki **Explorer** sekmesine gidin
 - Dosya ağacının altında **"Workflow Snapshot & Replay"** bölümünü bulun
 - Bu mini dashboard tüm işlemlerinizi kontrol etmenizi sağlar
 
-## 🎛️ Dashboard Özellikleri
+##  Dashboard Özellikleri
 
 ### Ana Kontroller
 - **🔴/⚪ Durum Göstergesi**: Kayıt durumunu gösterir
@@ -37,7 +30,7 @@ Dashboard aktif kayıt sırasında şunları gösterir:
 - Tıklayarak detaylarını görebilirsiniz
 - "+X tane daha..." ile tüm geçmişe erişebilirsiniz
 
-## 📝 Tipik Kullanım Senaryoları
+##  Tipik Kullanım Senaryoları
 
 ### Senaryo 1: Kod Dersi Hazırlama
 ```
@@ -82,7 +75,7 @@ Dashboard'dan "🤖 AI Asistanı" tıklayarak:
 - "Code formatting için otomatik araçlar kullanın"
 - "Bu işlemler için keyboard shortcut oluşturun"
 
-## 📊 Rapor Formatı
+##  Rapor Formatı
 
 Oluşturulan Markdown raporları şunları içerir:
 
@@ -105,7 +98,7 @@ Kronolojik sırayla tüm işlemler:
 3. 14:31:20 - Terminal komutu: npm start
 ...
 
-## 🎯 Yeniden Oynatma Talimatları
+##  Yeniden Oynatma Talimatları
 Bu workflow'u tekrarlamak için gerekli adımlar
 ```
 
@@ -168,7 +161,7 @@ Bu workflow'u tekrarlamak için gerekli adımlar
 - Webview'ların etkin olduğundan emin olun
 - Extension security settings'i kontrol edin
 
-## 💡 İpuçları
+##  İpuçları
 
 ### Verimli Kullanım
 1. **Küçük Oturumlar**: 30-60 dakikalık kayıtlar daha yönetilebilir
@@ -181,7 +174,7 @@ Bu workflow'u tekrarlamak için gerekli adımlar
 - Code review'lar için workflow'ları kullanın
 - Onboarding sürecinde yeni gelenlere örnek workflow'lar verin
 
-## 📚 Kaynaklar
+##  Kaynaklar
 
 - [GitHub Repository](https://github.com/your-repo/workflow-snapshot-replay)
 - [VS Code Extension API](https://code.visualstudio.com/api)
@@ -189,4 +182,3 @@ Bu workflow'u tekrarlamak için gerekli adımlar
 
 ---
 
-**Mutlu kodlamalar! 🚀**
